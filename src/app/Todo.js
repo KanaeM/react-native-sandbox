@@ -4,7 +4,7 @@ import {
 	View,
 	Text,
 	TextInput,
-	TouchableHighlight
+	TouchableOpacity
 } from 'react-native';
 
 export class Todo extends Component {
@@ -32,10 +32,13 @@ export class Todo extends Component {
 	render(){
 		return(
 			<View style={styles.container}>
-        <TextInput value={this.state.newTodo} onChange={this.handleChange.bind(this)} />
-        <TouchableHighlight onPress={this.handlePress.bind(this)}>
+        <TextInput 
+        	value={this.state.newTodo} 
+        	onChange={this.handleChange.bind(this)}
+        />
+        <TouchableOpacity onPress={this.handlePress.bind(this)}>
           <Text>Click Here</Text>
-        </TouchableHighlight>
+        </TouchableOpacity>
         {this.state.todos.map(todo => <Text>{todo}</Text>)}
       </View>
 		)
