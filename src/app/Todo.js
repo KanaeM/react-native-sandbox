@@ -4,7 +4,7 @@ import {
 	View,
 	Text,
 	TextInput,
-	TouchableOpacity
+	TouchableHighlight
 } from 'react-native';
 
 export class Todo extends Component {
@@ -17,13 +17,13 @@ export class Todo extends Component {
     }
   }
 
-  handleChange(e){
-    const {value} = e.target;
-    this.setState({newTodo: value});
+  handleChange(text){
+    // const {value} = text.target;
+    this.setState({newTodo: text});
   }
 
   handlePress(e){
-    e.preventDefault();
+    // e.preventDefault();
     const todos = [...this.state.todos, this.state.newTodo];
     this.setState({todos, newTodo: ''});
   }
@@ -34,12 +34,14 @@ export class Todo extends Component {
 			<View style={styles.container}>
         <TextInput 
         	value={this.state.newTodo} 
-        	onChange={this.handleChange.bind(this)}
+        	onChangeText={this.handleChange.bind(this)}
         />
-        <TouchableOpacity onPress={this.handlePress.bind(this)}>
+        <TouchableHighlight onPress={this.handlePress.bind(this)}>
           <Text>Click Here</Text>
-        </TouchableOpacity>
-        {this.state.todos.map(todo => <Text>{todo}</Text>)}
+        </TouchableHighlight>
+        <View>
+        	{this.state.todos.map((todo, i) => <Text key={i}>{todo}</Text>)}
+        </View>
       </View>
 		)
 	}
