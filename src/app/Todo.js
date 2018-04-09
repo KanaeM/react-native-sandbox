@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {
-	StyleSheet,
 	View,
 	Text,
 	TextInput,
-	TouchableHighlight
+	Dimensions,
+	TouchableOpacity
 } from 'react-native';
+import { styles } from './styles';
 
 export class Todo extends Component {
 
@@ -18,12 +19,10 @@ export class Todo extends Component {
   }
 
   handleChange(text){
-    // const {value} = text.target;
     this.setState({newTodo: text});
   }
 
   handlePress(e){
-    // e.preventDefault();
     const todos = [...this.state.todos, this.state.newTodo];
     this.setState({todos, newTodo: ''});
   }
@@ -32,36 +31,22 @@ export class Todo extends Component {
 	render(){
 		return(
 			<View style={styles.container}>
+				<Text style={styles.mainTitle}>To Do App</Text>
         <TextInput 
+        	style={styles.input}
         	value={this.state.newTodo} 
         	onChangeText={this.handleChange.bind(this)}
         />
-        <TouchableHighlight onPress={this.handlePress.bind(this)}>
-          <Text>Click Here</Text>
-        </TouchableHighlight>
-        <View>
-        	{this.state.todos.map((todo, i) => <Text key={i}>{todo}</Text>)}
+        <TouchableOpacity 
+        	onPress={this.handlePress.bind(this)}
+        	style={styles.button}
+        >
+          <Text style={styles.btnText}>Click Here</Text>
+        </TouchableOpacity>
+        <View style={styles.list}>
+        	{this.state.todos.map((todo, i) => <Text style={styles.listText} key={i}>{todo}</Text>)}
         </View>
       </View>
 		)
 	}
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
