@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import {
 	View,
 	Text,
+	Image,
 	TextInput,
 	Dimensions,
 	TouchableOpacity
 } from 'react-native';
 import { styles } from './styles';
+
+const backgroundImageUrl = require('./assets/succulent3.jpg');
 
 export class Todo extends Component {
 
@@ -31,6 +34,10 @@ export class Todo extends Component {
 	render(){
 		return(
 			<View style={styles.container}>
+				<Image 
+					style={styles.backgroundImage, 'cover'}
+					source={ backgroundImageUrl }
+				/>
 				<Text style={styles.mainTitle}>To Do App</Text>
         <TextInput 
         	style={styles.input}

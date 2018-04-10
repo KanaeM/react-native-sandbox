@@ -7,7 +7,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ECFFFF',
+    // position: 'absolute',
+    // top: 0,
+    // left: 0
+    // backgroundColor: '#ECFFFF',
   },
   welcome: {
     fontSize: 20,
@@ -18,6 +21,10 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  backgorundImage: {
+    flex: 1,
+    // 'cover'
   },
   input:{
     alignSelf: 'stretch',
