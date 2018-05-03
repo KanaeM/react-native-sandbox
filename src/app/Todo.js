@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 
-const backgroundImageUrl = require('./assets/succulent3.jpg');
+const backgroundImageUrl = require('./assets/img/succulent3.jpg');
 
 export class Todo extends Component {
 
@@ -35,24 +35,26 @@ export class Todo extends Component {
 		return(
 			<View style={styles.container}>
 				<Image 
-					style={styles.backgroundImage, 'cover'}
+					style={styles.backgroundImage}
 					source={ backgroundImageUrl }
 				/>
-				<Text style={styles.mainTitle}>To Do App</Text>
-        <TextInput 
-        	style={styles.input}
-        	value={this.state.newTodo} 
-        	onChangeText={this.handleChange.bind(this)}
-        />
-        <TouchableOpacity 
-        	onPress={this.handlePress.bind(this)}
-        	style={styles.button}
-        >
-          <Text style={styles.btnText}>Click Here</Text>
-        </TouchableOpacity>
-        <View style={styles.list}>
-        	{this.state.todos.map((todo, i) => <Text style={styles.listText} key={i}>{todo}</Text>)}
-        </View>
+				<View style={styles.wrapper}>
+					<Text style={styles.mainTitle}>Plant Reminders</Text>
+	        <TextInput 
+	        	style={styles.input}
+	        	value={this.state.newTodo} 
+	        	onChangeText={this.handleChange.bind(this)}
+	        />
+	        <TouchableOpacity 
+	        	onPress={this.handlePress.bind(this)}
+	        	style={styles.button}
+	        >
+	          <Text style={styles.btnText}>Click Here</Text>
+	        </TouchableOpacity>
+	        <View style={styles.list}>
+	        	{this.state.todos.map((todo, i) => <Text style={styles.listText} key={i}>{todo}</Text>)}
+	        </View>
+	      </View>
       </View>
 		)
 	}
