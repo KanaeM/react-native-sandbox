@@ -15,11 +15,13 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     position: 'absolute',
-    top: 96,
+    top: 0,
     backgroundColor: 'rgba(225, 225, 225, .8)',
     width: '100%',
     height: '100%',
-    padding: 24
+    padding: 24,
+    paddingTop: 96,
+    flexWrap: 'wrap'
   },
   instructions: {
     textAlign: 'center',
@@ -39,15 +41,16 @@ export const styles = StyleSheet.create({
     fontFamily: 'CactusSandwich',
     fontSize: 60,
     textAlign: 'center',
-
+    position: 'relative'
   },
   button: {
-    // width: 100,
-    // height: 50,
+    width: 150,
+    right: 0,
     textAlign: 'center',
     borderRadius: 50,
     backgroundColor: '#122619',
     padding: 24,
+
     shadowOffset: {
       width: 20,
       height: 20
