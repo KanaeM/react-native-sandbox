@@ -1,4 +1,4 @@
-# React Native Sandbox
+# React Native Test
 
-Used mainly for experimental purposes -- for now mainly Android.
+Used mainly for experimental purposes -- currently just Android.
   - react-native run-android
