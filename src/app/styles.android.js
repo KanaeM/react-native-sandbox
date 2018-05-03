@@ -44,7 +44,8 @@ export const styles = StyleSheet.create({
     position: 'relative'
   },
   button: {
-    width: 150,
+    alignSelf: 'center',
+    // width: 150,
     right: 0,
     textAlign: 'center',
     borderRadius: 50,
