@@ -1,4 +1,5 @@
 # React Native Test
 
 Used mainly for experimental purposes -- currently just Android.
-  - react-native run-android
+
+  - After connecting a phone or starting an emulator(I use Android studio) run: react-native run-android

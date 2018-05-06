@@ -20,8 +20,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     padding: 24,
-    paddingTop: 96,
-    flexWrap: 'wrap'
+    paddingTop: 96
   },
   instructions: {
     textAlign: 'center',
