@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   button: {
     alignSelf: 'center',
     right: 0,
-    textAlign: 'center',
+    // textAlign: 'center',
     borderRadius: 50,
     backgroundColor: '#122619',
     padding: 12,
