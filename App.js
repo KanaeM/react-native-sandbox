@@ -6,7 +6,8 @@
 
 import React, { Component } from 'react';
 import { Platform } from 'react-native';
-import { Todo } from './src/app/Todo'
+import { Todo } from './src/app/Todo';
+import { Reddit } from './src/app/Reddit';
 
 type Props = {};
 
@@ -14,7 +15,7 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <Todo />
+      <Reddit />      
     );
   }
 }

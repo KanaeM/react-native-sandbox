@@ -40,17 +40,19 @@ export class Todo extends Component {
 				/>
 				<View style={styles.wrapper}>
 					<Text style={styles.mainTitle}>Plant Reminders</Text>
-	        <TextInput 
-	        	style={styles.input}
-	        	value={this.state.newTodo} 
-	        	onChangeText={this.handleChange.bind(this)}
-	        />
-	        <TouchableOpacity 
-	        	onPress={this.handlePress.bind(this)}
-	        	style={styles.button}
-	        >
-	          <Text style={styles.btnText}>Click Here</Text>
-	        </TouchableOpacity>
+					<View style={styles.textForm}>
+		        <TextInput 
+		        	style={styles.input}
+		        	value={this.state.newTodo} 
+		        	onChangeText={this.handleChange.bind(this)}
+		        />
+		        <TouchableOpacity 
+		        	onPress={this.handlePress.bind(this)}
+		        	style={styles.button}
+		        >
+		          <Text style={styles.btnText}>OK</Text>
+		        </TouchableOpacity>
+		       </View>
 	        <View style={styles.list}>
 	        	{this.state.todos.map((todo, i) => <Text style={styles.listText} key={i}>{todo}</Text>)}
 	        </View>

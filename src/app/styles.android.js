@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     padding: 24,
-    paddingTop: 96
+    paddingTop: 64
   },
   instructions: {
     textAlign: 'center',
@@ -31,10 +31,14 @@ export const styles = StyleSheet.create({
     flex: 1,
     // 'cover'
   },
+  textForm: {
+    flexDirection: 'row'
+  },
   input:{
     alignSelf: 'stretch',
     textAlign: 'center',
     margin: 24,
+    width: '70%'
   },
   mainTitle:{
     fontFamily: 'CactusSandwich',
@@ -44,13 +48,12 @@ export const styles = StyleSheet.create({
   },
   button: {
     alignSelf: 'center',
-    // width: 150,
     right: 0,
     textAlign: 'center',
     borderRadius: 50,
     backgroundColor: '#122619',
-    padding: 24,
-
+    padding: 12,
+    // width: '20%',
     shadowOffset: {
       width: 20,
       height: 20
